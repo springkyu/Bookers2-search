@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get "/home/about" => "homes#about"
   resources :books
   resources :users
+  get "/search" => "searches#search"
 
 end
