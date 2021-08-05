@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'searches/search'
   devise_for :users, controllers: {
     sessions: 'devise/sessions',
     registrations: 'devise/registrations'
