@@ -4,7 +4,7 @@ class SearchesController < ApplicationController
     @value = params["search"]["value"]
     @how = params["search"]["how"]
 
-    @datas = search_for(@how, @model, @vslue)
+    @datas = search_for(@how, @model, @value)
   end
 
   private
@@ -50,7 +50,7 @@ class SearchesController < ApplicationController
     when 'backward'
       backward(model, value)
     when 'partical'
-      partical(modl, value)
+      partical(model, value)
     end
   end
 

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="col-xs-12">
     <% if @model == "user" %>
-      <h2>User search for '<%= @value %>'</h2>
+      <h2>Users search for '<%= @value %>'</h2>
       <table class="table">
         <thead>
           <tr>
@@ -13,7 +13,7 @@
       <% @datas.each do |user| %>
         <tbody>
           <tr>
-            <th><%= attachment_image_tag user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg" %><</th>
+            <th><%= attachment_image_tag user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg" %></th>
             <th><%= user.name %></th>
             <th><%= user.introduction %></th>
           </tr>
@@ -33,7 +33,7 @@
         <% @datas.each do |book| %>
         <tbody>
           <tr>
-            <th><%= attachment_image_tag user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg" %><</th>
+            <th><%= attachment_image_tag book.user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg" %></th>
             <th><%= book.title %></th>
             <th><%= book.body %></th>
           </tr>
